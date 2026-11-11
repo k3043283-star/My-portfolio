@@ -1,0 +1,373 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Portfolio</title>
+    <style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f9;
+    color: #222;
+    line-height: 1.6;
+}
+
+header {
+    background: #24243e;
+    color: white;
+    padding: 18px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: #a99cff;
+}
+
+#themeBtn {
+    padding: 8px 12px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+.hero {
+    min-height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    padding: 50px 8%;
+    background: linear-gradient(135deg, #5145bd, #887cf0);
+    color: white;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    margin: 15px 0 25px;
+}
+
+
+.avatar img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: white;
+    color: #5145bd;
+    display: block;
+    object-fit: cover;
+    margin:20px auto;
+    border:3px solid white;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 22px;
+    background: #5145bd;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.hero .btn {
+    background: white;
+    color: #5145bd;
+}
+
+section:not(.hero) {
+    padding: 65px 10%;
+    text-align: center;
+}
+
+section h2 {
+    color: #5145bd;
+    margin-bottom: 25px;
+    font-size: 30px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    margin: 18px auto;
+    max-width: 650px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+    color: #5145bd;
+    margin-bottom: 10px;
+}
+
+.skill {
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+.progress {
+    height: 12px;
+    background: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress div {
+    height: 100%;
+    background: #6558d3;
+    border-radius: 10px;
+}
+
+form {
+    max-width: 550px;
+    margin: auto;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 13px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: inherit;
+}
+
+textarea {
+    resize: vertical;
+}
+
+footer {
+    background: #24243e;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Dark mode */
+body.dark {
+    background: #171727;
+    color: white;
+}
+
+body.dark section:not(.hero) {
+    background: #171727;
+}
+
+body.dark .card {
+    background: #292941;
+    color: white;
+}
+
+body.dark section h2 {
+    color: #a99cff;
+}
+
+body.dark .card h3 {
+    color: #a99cff;
+}
+
+body.dark input,
+body.dark textarea {
+    background: #292941;
+    color: white;
+    border-color: #555;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        justify-content: center;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .avatar {
+        width: 150px;
+        height: 150px;
+    }
+
+    section:not(.hero) {
+        padding: 45px 6%;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <h2>My Portfolio</h2>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <button id="themeBtn">🌙</button>
+    </nav>
+</header>
+
+<section id="home" class="hero">
+    <div>
+        <h1>Hello, I'm Khushboo</h1>
+        <h3>Student | Web Developer</h3>
+        <p>Welcome to my personal portfolio website!</p>
+        <a href="#about" class="btn">Explore More</a>
+    </div>
+
+    <div class="avatar">
+        <img src="/Users/khushboo/My-portfolio/WhatsApp Image 2026-11-11 at 10.38.28.jpeg" >
+    </div>
+</section>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>
+        I am a student interested in programming,
+        web development and technology. I enjoy
+        learning new skills and creating websites.
+    </p>
+    <p>My goal is to become a skilled software developer.</p>
+</section>
+
+<section id="education">
+    <h2>My Education</h2>
+    <div class="card">
+        <h3>Bosscoder School of technology</h3>
+        <p>Course: CSE AI/ML</p>
+        <p>Year: 2026 - 2030</p>
+    </div>
+    <div class="card">
+        <h3>Gudha International School</h3>
+        <p>Higher Secondary Education</p>
+        <p>Year: 2024 - 2026</p>
+    </div>
+</section>
+
+<section id="skills">
+    <h2>My Skills</h2>
+
+    <div class="skill">
+        <p>HTML</p>
+        <div class="progress"><div style="width:80%"></div></div>
+    </div>
+
+    <div class="skill">
+        <p>CSS</p>
+        <div class="progress"><div style="width:70%"></div></div>
+    </div>
+
+    <div class="skill">
+        <p>Java</p>
+        <div class="progress"><div style="width:50%"></div></div>
+    </div>
+
+    <div class="skill">
+        <p>Communication</p>
+        <div class="progress"><div style="width:85%"></div></div>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>My Projects</h2>
+
+    <div class="card">
+        <h3>Personal Portfolio Website</h3>
+        <p>A responsive personal website created using HTML and CSS.</p>
+        <p>Technologies: HTML, CSS, Java</p>
+    </div>
+
+    <div class="card">
+        <h3>Project Two</h3>
+        <p>Add your project description here.</p>
+    </div>
+</section>
+
+<section id="hobbies">
+    <h2>Hobbies & Interests</h2>
+    <div class="card">
+        <p>📚 Reading</p>
+        <p>🎵 Listening to Music</p>
+        <p>📷 Playing cricket and basketball</p>
+        <p>💻 Coding</p>
+    </div>
+</section>
+
+<section id="achievements">
+    <h2>My Achievements</h2>
+    <div class="card">
+        <h3>Certificate</h3>
+        <p>Add your certificates and achievements here.</p>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Me</h2>
+
+    <form id="contactForm">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <textarea id="message" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+        <p id="status"></p>
+    </form>
+
+    <p>k3043283@gmail.com</p>
+    <p>GitHub: github.com/k3043283-star</p>
+    <p>LinkedIn: linkedin.com/in/Khushboo.</p>
+</section>
+
+<footer>
+    <p>© 2026 Khushboo| Personal Portfolio</p>
+</footer>
+
+</body>
+</html>
